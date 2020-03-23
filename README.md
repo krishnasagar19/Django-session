@@ -9,7 +9,7 @@ Before that, look into Django.
 3. Intentions - Rapid development, scalable, all inclusive for business reqts.
 
 # Why Django:
-1. Security - 
+ 1. Security - 
     Cross site scripting - django templates, 
     Cross site request forgery - CSRF validation, 
     SQL injection - Django Queryset API,
@@ -50,3 +50,61 @@ Before that, look into Django.
  18. Spring Session - Django Session
  19. spring-boot-test - Django unit tests
  
+
+ # Core features:
+ 1. Model & Fields
+ 2. Queryset, Managers
+ 3. Serializers & Validators
+ 4. Views
+ 5. Routes/ urls
+ 6. Apps and registry
+ 7. Dispatch
+ 8. Request, Response
+ 9. Authentication, Permissions
+ 10. Forms, Templates and static
+ 11. Unit tests
+ 12. Cache
+ 13. I18n and l10n
+ 14. Pagination
+ 15. Settings
+ 16. Middlewares
+ 
+
+ 
+ # Limitations:
+ 1. Only horizontal scalable as multi-threading support of CPython - GIL
+ 2. Zero downtime not completely achievable
+ 3. Forward migrations are easy but backward migrations for reverse is hard for prod - Data loss anxiety
+ 4. Sometimes code modularity and django features delink a complete business workflow so, hard to comprehend code
+ eg: model signals and notifications
+ 5. More flexibility leads to bad design and vicious circle of hard changes in projects - leads to more bugs unless code written responsibly
+ 6. Any feature's workflow stitching in django features leads to increased issues probability.
+ 7. Monolithic
+ 
+ 
+ # Literally Hard Best Practices for django project:
+ Always follow our backend guidelines: 
+ https://ridecell.atlassian.net/wiki/spaces/EN/pages/94295038/Summon-platform+Code+Guidelines
+ https://ridecell.atlassian.net/wiki/spaces/ENGSHARED/pages/94433164/Standards+for+URLs
+ https://ridecell.atlassian.net/wiki/spaces/ENGSHARED/pages/94432989/API+v3+Specifications
+ https://ridecell.atlassian.net/wiki/spaces/EN/pages/94291940/Backend+Logging+Guidelines
+ https://ridecell.atlassian.net/wiki/spaces/ENGSHARED/pages/94433083/Django+Style+Guide
+ https://ridecell.atlassian.net/wiki/spaces/ENGSHARED/pages/94293961/Django+Migrations+and+Downtime
+ 
+ 1. Not to follow loose coupling adamantly unless maintainability is not compromised. Resolve case by case.
+ 2. Less but explicit code - No assumption in the code
+ 3. DRY and KISS but again follow good design patterns
+ 4. Consistent code patterns in the django apps - gud and practical design patterns
+ 5. Use model as single responsible class via model as object with all necessary domain encapsulated and 
+ queryset and queryset manager for database queries
+ 6. Plan model design based on domain needed - queries and relations definition
+ 7. Practice of query building of queryset for inspection and checking performance.
+ 8. Judicious use of performance oriented in filing query on model based on database design.
+ 9. Hook settings.DEBUG into code for non-prod environments - useful to check parts of project easily.
+ 10. ORM API does not work for all needs in code; sometimes raw sql helps
+ 11. Product does not depend too much on third party packages/ requirements.
+ 
+ # Helpful resource:
+ 1. https://django-project-skeleton.readthedocs.io/en/latest/structure.html
+ 2. https://github.com/wsvincent/awesome-django
+ 3. https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/
