@@ -1,5 +1,5 @@
 # Django-best-practices
-Repo for Django best practices guide
+Repo for Django sessions
 
 Before that, look into Django.
 
@@ -82,7 +82,7 @@ Before that, look into Django.
  7. Monolithic
  
  
- # Literally Hard Best Practices for django project:
+ # Best Practices for django project:
  Always follow our backend guidelines: 
  https://ridecell.atlassian.net/wiki/spaces/EN/pages/94295038/Summon-platform+Code+Guidelines
  https://ridecell.atlassian.net/wiki/spaces/ENGSHARED/pages/94433164/Standards+for+URLs
@@ -90,19 +90,6 @@ Before that, look into Django.
  https://ridecell.atlassian.net/wiki/spaces/EN/pages/94291940/Backend+Logging+Guidelines
  https://ridecell.atlassian.net/wiki/spaces/ENGSHARED/pages/94433083/Django+Style+Guide
  https://ridecell.atlassian.net/wiki/spaces/ENGSHARED/pages/94293961/Django+Migrations+and+Downtime
- 
- 1. Not to follow loose coupling adamantly unless maintainability is not compromised. Resolve case by case.
- 2. Less but explicit code - No assumption in the code
- 3. DRY and KISS but again follow good design patterns
- 4. Consistent code patterns in the django apps - gud and practical design patterns
- 5. Use model as single responsible class via model as object with all necessary domain encapsulated and 
- queryset and queryset manager for database queries
- 6. Plan model design based on domain needed - queries and relations definition
- 7. Practice of query building of queryset for inspection and checking performance.
- 8. Judicious use of performance oriented in filing query on model based on database design.
- 9. Hook settings.DEBUG into code for non-prod environments - useful to check parts of project easily.
- 10. ORM API does not work for all needs in code; sometimes raw sql helps
- 11. Product does not depend too much on third party packages/ requirements.
  
  # Helpful resource:
  1. https://django-project-skeleton.readthedocs.io/en/latest/structure.html
