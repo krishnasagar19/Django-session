@@ -1,7 +1,5 @@
-# Django-best-practices
+# Django-session
 Repo for Django sessions
-
-Before that, look into Django.
 
 # What is Django:
 1. Co-founders: Adrian Holovaty, Simon Willison
