@@ -1,0 +1,16 @@
+<!-- This is jinja based template rendered at server side and fed in http response with html content-->
+
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electric Charging Stations</title>
+</head>
+<body>
+<main>
+    {%  block content %}
+    {%  endblock %}
+</main>
+</body>
+</html>

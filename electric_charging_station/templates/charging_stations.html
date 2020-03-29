@@ -1,22 +1,14 @@
-{% load static from staticfiles %}
-<!-- This is jinja based template rendered at server side and fed in http response with html content-->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Charging_stations</title>
-</head>
-<body>
-    {%for cs in charging_stations %}
-        <br>
-        <div>Name: {{ cs.name }}</div>
-        <div>Address: {{ cs.address }}</div>
-        <br>
-        {% for cp in cs.charging_point.all %}
-            <div>Port No: {{ cp.port_number }}</div>
-            <div>Status: {{ cp.status }}</div>
-            <div>Charging Fee: {{ cp.charging_fee }}</div>
-        {%  endfor %}
-    {% endfor %}
-</body>
-</html>
+{%  extends 'base.html' %}
+{% block content %}
+{%for cs in charging_stations %}
+    <br>
+    <div>Name: {{ cs.name }}</div>
+    <div>Address: {{ cs.address }}</div>
+    <br>
+    {% for cp in cs.charging_point.all %}
+        <div>Port No: {{ cp.port_number }}</div>
+        <div>Status: {{ cp.status }}</div>
+        <div>Charging Fee: {{ cp.charging_fee }}</div>
+    {%  endfor %}
+{% endfor %}
+{% endblock %}
