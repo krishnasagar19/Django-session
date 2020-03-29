@@ -15,18 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.contrib.auth import views
-from django.shortcuts import redirect
 from django.urls import path
 
 import charging_stations.views as charging_stations_views
-
-profile_redirct = lambda request: redirect('charging_stations_authenticated', permanent=True)
+from electric_charging_station.login import login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', views.LoginView.as_view(), name='login'),
-    url('accounts/profile/', profile_redirct),
+    path('login/', login, name='login'),\
     url('charging_stations', charging_stations_views.all_charging_stations, name='charging_stations'),
     url('charging_stations_authenticated', charging_stations_views.charging_stations,
         name='charging_stations_authenticated'),

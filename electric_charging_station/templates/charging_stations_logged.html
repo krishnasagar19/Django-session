@@ -5,8 +5,18 @@
     <title>Charging_stations</title>
 </head>
 <body>
-{% if request.user.authenticated %}
-    {% extend 'templates/charging_stations.html' %}
+{% if request.user.is_authenticated %}
+    {%for cs in charging_stations %}
+        <br>
+        <div>Name: {{ cs.name }}</div>
+        <div>Address: {{ cs.address }}</div>
+        <br>
+        {% for cp in cs.charging_point.all %}
+            <div>Port No: {{ cp.port_number }}</div>
+            <div>Status: {{ cp.status }}</div>
+            <div>Charging Fee: {{ cp.charging_fee }}</div>
+        {%  endfor %}
+    {% endfor %}
 {% endif %}
 </body>
 </html>

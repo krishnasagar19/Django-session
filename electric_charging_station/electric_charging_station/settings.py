@@ -133,3 +133,10 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+AUTH_USER_MODEL = 'auth.User'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+)
+LOGIN_URL = 'login/'
