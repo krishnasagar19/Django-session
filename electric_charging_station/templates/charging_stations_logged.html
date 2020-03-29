@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charging_stations</title>
+</head>
+<body>
+{% if request.user.authenticated %}
+    {% extend 'templates/charging_stations.html' %}
+{% endif %}
+</body>
+</html>

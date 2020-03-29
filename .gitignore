@@ -1,2 +1,8 @@
 # ignore pycharm project
 *.idea
+
+# ignore NB checkpoints
+*electric_charging_station/.ipynb_checkpoints/
+
+# Django project static
+*electric_charging_station/static/
