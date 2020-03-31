@@ -22,7 +22,7 @@ from electric_charging_station.login import login
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login, name='login'),\
+    path('login/', login, name='login'),
     url('charging_stations', charging_stations_views.all_charging_stations, name='charging_stations'),
     url('charging_stations_authenticated', charging_stations_views.charging_stations,
         name='charging_stations_authenticated'),
