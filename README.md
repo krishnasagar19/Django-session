@@ -6,6 +6,9 @@ Repo for Django sessions
 2. MVT pattern - DRY, KISS - less code, extensible, pluggable, low coupling
 3. Intentions - Rapid development, scalable, all inclusive for business reqts.
 
+# Presentation doc:
+https://github.com/krishnasagar19/Django-session/blob/master/slides/django_basics.slides.html
+
 # Why Django:
  1. Security - 
     Cross site scripting - django templates, 
