@@ -3,6 +3,9 @@ from django.contrib.auth import authenticate, forms, login as auth_login
 from django.shortcuts import render, redirect
 
 
+# This file gives you idea about wrong placement of views in the django application.
+# Solution: create `auth` django app and add below view methods in the views.py
+
 def login(request, *args, **kwargs):
     if request.method == 'POST':
         username = request.POST.get('username', '')
